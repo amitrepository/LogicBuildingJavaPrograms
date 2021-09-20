@@ -13,7 +13,7 @@ public class SellBuyStock {
 		int min=Integer.MAX_VALUE;
 	int max=0;
 	for(int i=0;i<n.length;i++) {
-		min=min()
+		//min=min()
 	}
 		return 0;
 	}

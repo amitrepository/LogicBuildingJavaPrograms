@@ -11,6 +11,12 @@ public class fibonacci {
 		second=third;
 		
 	}
+	
+	String s="Amit";
+	if(s.contains("Amit")) {
+		System.out.println("Hello");
+	}
+	
 
 	}
 

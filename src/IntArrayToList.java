@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import org.apache.commons.lang3.ArrayUtils;
+
 
 public class IntArrayToList {
 
@@ -17,7 +17,7 @@ public class IntArrayToList {
 		// Style 2
 		List<Integer> list2= Arrays.stream(a).boxed().collect(Collectors.toList());
 		//style 3
-		List<Integer> list3= Arrays.asList(ArrayUtils.toObject(a));
+		//List<Integer> list3= Arrays.asList(ArrayUtils.toObject(a));
 		
 		
 		//Summing Numbers with Java Stream
