@@ -1,9 +1,12 @@
 package oops.abstraction;
 
 public abstract  class DemoAbstract {
-	
+
+	int x;
 	//abstract method don't required implementation
 	public abstract  void someMethod();
+
+	public abstract  void someMethod2();
 
 	//non abstract method  required implementation or body
 	public static void concreteMethod() {
@@ -19,5 +22,9 @@ public abstract  class DemoAbstract {
 	//abstract method cannot be static ( only public and protected allowed)
 
 	//concrete method can be static here.
+
+//	DemoAbstract(Integer i){
+//		this.x=i;
+//	}
 
 }
