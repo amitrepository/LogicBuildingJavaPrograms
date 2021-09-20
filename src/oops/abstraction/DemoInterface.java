@@ -10,5 +10,4 @@ public interface DemoInterface {
     //Actually bydefault members will be treated as public static final so it is expecting some value to be intialize.
     String s="";
 
-
 }
