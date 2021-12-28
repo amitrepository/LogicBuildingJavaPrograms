@@ -31,20 +31,16 @@ class Test {
 		
 		System.out.println(set.size());
 		
-		Calendar cal = Calendar.getInstance();
-		SimpleDateFormat sdf= new SimpleDateFormat("yyyy-mm-dd_hh-mm");
-		String date= sdf.format(cal.getTime());
+//		Calendar cal = Calendar.getInstance();
+//		SimpleDateFormat sdf= new SimpleDateFormat("yyyy-mm-dd_hh-mm");
+//		String date= sdf.format(cal.getTime());
 		
-		System.out.println();
+
+		StringBuffer sb1= new StringBuffer("durga");
+		StringBuffer sb2= new StringBuffer("durga");
 		
-		
-		String str="Capture.PNG";
-		String spl[]=str.split(".");
-		
-		String s="Amit";
-		if(s.contains("Amit")) {
-			System.out.println("Hello");
-		}
+		System.out.println(sb1.equals(sb2));
+		System.out.println(sb1==sb2);
 		
 	}
 

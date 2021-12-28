@@ -1,4 +1,3 @@
-
 public class Swaping {
 
 	public static void main(String[] args) {
@@ -27,8 +26,6 @@ public class Swaping {
 		j=i+j-(i=j);
 		System.out.println("i=" +i +" "+ "j="+j);
 	
-		
-		
 		
 	}
 

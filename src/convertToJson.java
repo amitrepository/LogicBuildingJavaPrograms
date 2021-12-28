@@ -2,6 +2,8 @@ import java.io.IOException;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
+
+
 public class convertToJson {
 
 	public static void main(String[] args) {
@@ -32,10 +34,10 @@ class optimiDto {
 
 	
 	public Optimize getOpt() {
-		return opt;
+		return getOpt();
 	}
 	public void setOpt(Optimize opt) {
-		this.opt = opt;
+		this.jon = opt;
 	}
 	public String getCountry() {
 		return country;
