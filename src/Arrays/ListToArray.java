@@ -12,9 +12,10 @@ public class ListToArray {
 		list.add(2);
 		int[] arr = list.stream().mapToInt(i -> i).toArray();
 		System.out.println(arr.length);
-
+		
+		///////////////////////////////////////////////////////
+		
 		ArrayList<String> al = new ArrayList<String>();
-
 		// Populating the ArrayList by custom elements
 		al.add("Anshul Aggarwal");
 		al.add("Mayank Solanki");

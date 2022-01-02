@@ -17,17 +17,19 @@ public class MapReduceExample {
 		for(int num:numbers) {
 			sum=sum+num;
 		}
+		//Total sum 33
 		System.out.println(sum);
 		
-		//Average sum
+		//Total sum 33
 		int sum1=numbers.stream().mapToInt(i->i).sum();
 		System.out.println(sum1);
-		//Average sum
+		//Total sum 33
 		int sum2=numbers.stream().reduce(0, (a,b)->a+b);
 		System.out.println(sum2);
-		//Average sum
+		//Total sum 33
 		Optional<Integer> sum3=numbers.stream().reduce(Integer::sum);
 		System.out.println(sum3.get());
+
 		//Max value
 		int maxValue=numbers.stream().reduce(0, (a,b)-> a>b ?a:b);
 		System.out.println("Max: "+maxValue);
