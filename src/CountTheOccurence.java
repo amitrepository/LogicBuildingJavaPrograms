@@ -23,7 +23,7 @@ public class CountTheOccurence {
 		int count = 0;
 
 		String str1 = "java";
-		char[] s = str1.toCharArray();
+		//char[] s = str1.toCharArray();
 		for (char c = 'a'; c < 'z'; c++) {
 			for (int j = 0; j < str1.length(); j++) {
 				if (str1.charAt(j) == c) {

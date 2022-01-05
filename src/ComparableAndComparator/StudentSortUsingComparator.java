@@ -31,8 +31,11 @@ public class StudentSortUsingComparator {
 					if(o1.rollNo<o2.rollNo) return -1;
 					else return 0;
 				}
-	        	
+
 	        });
+
+			//desc
+			//Collections.sort(list, (i1,i2) -> (i1.rollNo>i2.rollNo) ?-1 : (i1.rollNo<i2.rollNo) ? +1 :0);
 	        
 	        System.out.println("\n\nAfter sort by name:");
 	        list.forEach(s -> System.out.print(s.name + " " + s.rollNo + ", "));

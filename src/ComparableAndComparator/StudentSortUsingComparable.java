@@ -15,7 +15,6 @@ public class StudentSortUsingComparable {
 		Student s5 = new Student(15);
 
 		List<Student> list = new ArrayList<>();
-
 		list.add(s1);
 		list.add(s2);
 		list.add(s3);

@@ -1,12 +1,23 @@
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 class Test {
+
+//	int test() {
+//		try {
+//			return 1;
+//		}
+//		finally {
+//			return 2;
+//			System.out.println("list.size()");
+//		}
+//		return 3;
+//	}
 	public static void main(String args[]) {
+
+
+
+
 		
 		List <Integer> list=new ArrayList<Integer>();
 		list.add(null);
@@ -17,7 +28,7 @@ class Test {
 		list.add(3);
 		
 		//list.stream().forEach(s-> System.out.println(s));
-		
+
 		System.out.println(list.size());
 		
 		//System.out.println(list.stream().min((i1,i2)-> -i2.compareTo(i1)).get());
@@ -41,7 +52,20 @@ class Test {
 		
 		System.out.println(sb1.equals(sb2));
 		System.out.println(sb1==sb2);
+///////////////////////////////////////
+		Map<String,String> gfg = new HashMap<String,String>();
+
+		// enter name/url pair
+		gfg.put("GFG", "geeksforgeeks.org");
+		gfg.put("Practice", "practice.geeksforgeeks.org");
+		gfg.put("Code", "code.geeksforgeeks.org");
+		gfg.put("Quiz", "quiz.geeksforgeeks.org");
+
+		// using for-each loop for iteration over Map.entrySet()
+		for (Map.Entry<String,String> entry : gfg.entrySet())
+			System.out.println("Key = " + entry.getKey() +
+					", Value = " + entry.getValue());
+	}
 		
 	}
 
-}
