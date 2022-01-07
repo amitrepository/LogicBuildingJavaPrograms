@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 //Send mail to all student of university regarding their registration of the academic year.
 //6000 student
-//data from the differnt db
+//data from the different db
 //0.5 sec each student
 // 6000 * 0.5 = 3000 sec or 50 min
 
@@ -23,7 +23,7 @@ public class SendMail implements Runnable {
 }
 
 class ExuctorServiceRealLifeProblem {
-    public static void main(String args[]) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         LocalTime time = LocalTime.now();
         System.out.println(time.getSecond());
         ExecutorService es = Executors.newFixedThreadPool(1);

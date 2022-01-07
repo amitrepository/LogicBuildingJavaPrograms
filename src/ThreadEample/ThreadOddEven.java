@@ -1,68 +1,71 @@
 package ThreadEample;
 
+import static sun.management.snmp.jvminstr.JvmThreadInstanceEntryImpl.ThreadStateMap.Byte0.runnable;
+
 public class ThreadOddEven {
 
 	public static void main(String[] args) {
-		
-		PrintOddEven print = new PrintOddEven();
-		Thread odd = new Thread(new OddEven(print,1));
-		Thread even = new Thread(new OddEven(print,2));
+
+		PrintOddEven ptr= new PrintOddEven();
+		Thread odd = new Thread(new OddEven(ptr,1));
+		Thread even = new Thread(new OddEven(ptr,2));
 		odd.start();
 		even.start();
 
 	}
-
 }
 
 class OddEven implements Runnable {
-	int startPoint;
+	int num;
 	private PrintOddEven ptr;
-	
-	OddEven(PrintOddEven ptr,int startPoint) {
-		this.ptr=ptr;
-		this.startPoint=startPoint;
+
+	public OddEven(PrintOddEven ptr, int num) {
+		this.num = num;
+		this.ptr = ptr;
 	}
 
 	public void run() {
-
-		while (startPoint <= 20) {
-			if (startPoint % 2 == 0) {
+		while(num<=20){
+			if(num%2==0){
 				try {
-					ptr.printEven(startPoint);
+					ptr.printEven(num);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-			} else {
+			}else{
 				try {
-					ptr.printOdd(startPoint);
+					ptr.printOdd(num);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
-			startPoint=startPoint+2;
+			num=num+2;
 		}
+
 	}
 }
 
-class PrintOddEven {
-	public volatile boolean oddChance = true;
+class PrintOddEven{
 
-	public synchronized void printOdd(int num) throws InterruptedException {
-		if (!oddChance) {
+	boolean odd= true;
+	public synchronized void printOdd(int i) throws InterruptedException {
+		if(!odd){
 			wait();
 		}
-		System.out.println("Odd Thread :" + num);
-		oddChance = false;
-		notifyAll();
+		System.out.println("ODD: "+i);
+		odd=false;
+		notify();
+
 	}
 
-	public synchronized void printEven(int num) throws InterruptedException {
-
-		if (oddChance) {
+	public synchronized void printEven(int i) throws InterruptedException {
+		if (odd) {
 			wait();
 		}
-		System.out.println("Even Thread: " +num);
-		oddChance = true;
-		notifyAll();
+		System.out.println("EVEN :" +i);
+		odd =true;
+		notify();
 	}
 }
+
+
