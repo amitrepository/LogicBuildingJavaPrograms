@@ -1,74 +1,76 @@
 package Person;
 
 public class Person implements Comparable<Person> {
-	private String firstName;
-	private String lastName;
-	private String email;
-	private Gender gender;
-	private int age;
-	
-	public enum Gender{MALE,FEMALE};
+    private String firstName;
+    private String lastName;
+    private String email;
+    private Gender gender;
+    private int age;
 
-	public Person() {
-	}
+    public enum Gender {MALE, FEMALE}
 
-	public String getFirstName() {
-		return firstName;
-	}
+    ;
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public Person() {
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public Gender getGender() {
-		return gender;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public void setGender(Gender gender) {
-		this.gender = gender;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public int getAge() {
-		return age;
-	}
+    public Gender getGender() {
+        return gender;
+    }
 
-	public void setAge(int age) {
-		this.age = age;
-	}
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
-	public Person(String firstName, String lastName, String email, Gender gender, int age) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.gender = gender;
-		this.age = age;
-	}
+    public int getAge() {
+        return age;
+    }
 
-	@Override
-	public int compareTo(Person another) {
-		return this.age - another.getAge();
-	}
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-	@Override
-	public String toString() {
-		return "Person [firstName=" + firstName + ", lastName=" + lastName + "]";
-	}
+    public Person(String firstName, String lastName, String email, Gender gender, int age) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.gender = gender;
+        this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person another) {
+        return this.age - another.getAge();
+    }
+
+    @Override
+    public String toString() {
+        return "Person [firstName=" + firstName + ", lastName=" + lastName + "]";
+    }
 
 }

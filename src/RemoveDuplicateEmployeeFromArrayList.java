@@ -1,3 +1,5 @@
+import Sorting.Employee.Employee;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -13,7 +15,7 @@ public class RemoveDuplicateEmployeeFromArrayList {
 		list.add(new Employee(1, "A", 10, 1000));
 		list.add(new Employee(3, "C", 30, 4000));
 		
-		 System.out.println("Employee List(Duplicate)");
+		 System.out.println("Sorting.Employee.Employee List(Duplicate)");
 	       for (Employee employee : list) {
 	           System.out.println(employee);
 	       }
@@ -21,14 +23,14 @@ public class RemoveDuplicateEmployeeFromArrayList {
 	    // create has set. Set will contains only unique objects
 	       HashSet<Employee> hashSet = new HashSet(list); 
 	       
-	       System.out.println("Employee List: Unique)");
+	       System.out.println("Sorting.Employee.Employee List: Unique)");
 	       for (Employee employee : hashSet) {
 	           System.out.println(employee);
 	       }
 	       
 	       
 		List<Employee> uniqueEmployee = list.stream().distinct().collect(Collectors.toList());
-		System.out.println("Employee List-->(Unique)");
+		System.out.println("Sorting.Employee.Employee List-->(Unique)");
 		for (Employee employee : uniqueEmployee) {
 			System.out.println(employee);
 }

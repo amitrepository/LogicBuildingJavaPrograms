@@ -1,8 +1,6 @@
 package Stream.map.reduce;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import Stream.Parallel.Stream.EmployeeDatabase;
 
@@ -36,6 +34,10 @@ public class MapReduceExample {
 		//Max Value
 		int max=numbers.stream().reduce(Integer::max).get();
 		System.out.println("Max val: " +max);
+
+		//min
+		int min=numbers.stream().reduce(Integer::min).get();
+		System.out.println("Min val: " +min);
 		//Longest String
 		String longestString=words.stream().reduce((w1,w2)->w1.length()>w2.length() ? w1:w2).get();
 		System.out.println(longestString);

@@ -1,6 +1,9 @@
 package ThreadEample.Producer.Consumer;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 //Utility class
 class Utility {
     int i;
@@ -75,6 +78,7 @@ class Producer implements Runnable {
 
 public class ProducerConsumer {
     //Create main File, Run producer and consumer
+    private static Logger logger = LogManager.getLogger(ProducerConsumer.class);
     public static void main(String[] args) {
         Utility utility = new Utility();
         new Producer(utility);
