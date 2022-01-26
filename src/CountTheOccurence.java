@@ -5,20 +5,25 @@ public class CountTheOccurence {
 	public static void main(String[] args) {
 
 		String str = "aasse";
+//
+//
+//		String someString = "elephant";
+//		long count1 = someString.chars().filter(ch -> ch == 'e').count();
+//		System.out.println(count1);
 
-		HashMap<Character, Integer> hmap = new HashMap<>();
-
-		char ch[] = str.toCharArray();
-
-		for (char c : ch) {
-			if (hmap.containsKey(c)) {
-				hmap.put(c, hmap.get(c) + 1);
-			} else {
-				hmap.put(c, 1);
-			}
-		}
-
-		System.out.println(hmap);
+//		HashMap<Character, Integer> hmap = new HashMap<>();
+//
+//		char ch[] = str.toCharArray();
+//
+//		for (char c : ch) {
+//			if (hmap.containsKey(c)) {
+//				hmap.put(c, hmap.get(c) + 1);
+//			} else {
+//				hmap.put(c, 1);
+//			}
+//		}
+//
+//		System.out.println(hmap);
 
 		int count = 0;
 

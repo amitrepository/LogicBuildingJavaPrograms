@@ -47,7 +47,32 @@ public class MapReduceExample {
 		.mapToDouble(i->i).average().getAsDouble();
 		
 		System.out.println("Avg salary: "  +avgSal);
-		
+
+		LinkedHashMap<Integer,String> l= new LinkedHashMap<>();
+		l.put(100,"John");  // Adding Elements
+		l.put(105,"Dev");
+		l.put(102,"Arya");
+		l.put(103,"Zoya");
+
+		//Collections.synchronizedMap(l);
+		for(Map.Entry m:l.entrySet()){
+			System.out.println(m.getKey()+" "+m.getValue());
+		}
+
+		TreeSet<Integer> set = new TreeSet<>();
+		set.add(3);
+		set.add(4);
+		set.add(3);
+		set.add(5);
+
+		TreeMap<Integer, Integer> tm = new TreeMap<>();
+		tm.put(2, 4);
+		tm.put(3, 5);
+		tm.put(4, 5);
+		tm.put(2, 3);
+		System.out.println(set);
+		System.out.println(tm);
+
 
 	}
 

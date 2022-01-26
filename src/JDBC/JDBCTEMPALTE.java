@@ -24,7 +24,6 @@ public class JDBCTEMPALTE {
 
     }
 
-
 }
 
     class SimpleJdbcCallFactory {

@@ -6,9 +6,9 @@ public class ThreadOddEven {
 
         PrintOddEven ptr = new PrintOddEven();
         Thread odd = new Thread(new OddEven(ptr, 1));
-        //Thread even = new Thread(new OddEven(ptr, 2));
+        Thread even = new Thread(new OddEven(ptr, 2));
         odd.start();
-        //even.start();
+        even.start();
 
     }
 }
