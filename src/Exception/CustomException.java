@@ -1,4 +1,4 @@
-package String;
+package Exception;
 
 public class CustomException extends Exception {
 	
