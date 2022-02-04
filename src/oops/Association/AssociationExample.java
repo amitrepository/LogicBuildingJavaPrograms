@@ -5,7 +5,7 @@ public class AssociationExample {
     // Main driver mmethod
     public static void main(String[] args) {
 
-        // Creating objects of bank and Sorting.Employee.Employee class
+        // Creating objects of bank and Sorting.JavaHungry.Employee.JavaHungry.Employee class
         Bank bank = new Bank("RBI");
         Employee emp = new Employee("ROB");
 
@@ -36,18 +36,18 @@ class Bank {
 }
 
 // Class 2
-// Sorting.Employee.Employee class
+// Sorting.JavaHungry.Employee.JavaHungry.Employee class
 class Employee {
     // Attribures of employee
     private String name;
 
-    // Sorting.Employee.Employee name
+    // Sorting.JavaHungry.Employee.JavaHungry.Employee name
     Employee(String name) {
         // This keyword refwrs to current insytance itself
         this.name = name;
     }
 
-    // Method of Sorting.Employee.Employee class
+    // Method of Sorting.JavaHungry.Employee.JavaHungry.Employee class
     public String getEmployeeName() {
         // returning the name of employee
         return this.name;

@@ -28,6 +28,7 @@ public class OutputTrace {
 		I1 i1=new M1();
 		i1.m1();
 		i1.m2();
+		//I1.m1();
 
 
 	}

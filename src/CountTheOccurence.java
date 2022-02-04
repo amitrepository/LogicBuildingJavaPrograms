@@ -1,4 +1,9 @@
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.Map.Entry;
 
 public class CountTheOccurence {
 
@@ -27,8 +32,14 @@ public class CountTheOccurence {
 
 		int count = 0;
 
-		String str1 = "java";
-		//char[] s = str1.toCharArray();
+		Map<String, String> map = new HashMap<String,String>();
+		map= map.entrySet().stream().
+				sorted(Map.Entry.comparingByValue()).
+				collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(e1, e2)->e1, LinkedHashMap::new));
+
+
+		String str1 = "ttccccdffgkkkkk";
+
 		for (char c = 'a'; c < 'z'; c++) {
 			for (int j = 0; j < str1.length(); j++) {
 				if (str1.charAt(j) == c) {

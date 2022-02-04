@@ -50,7 +50,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Sorting.Employee.Employee [id=" + id + ", name=" + name + ", age=" + age + ", salary=" + salary + "]";
+        return "Sorting.JavaHungry.Employee.JavaHungry.Employee [id=" + id + ", name=" + name + ", age=" + age + ", salary=" + salary + "]";
     }
 
     @Override
